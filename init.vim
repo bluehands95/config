@@ -20,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Theme
+Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
 
 " Nav
@@ -31,7 +32,7 @@ Plug 'ap/vim-buftabline'
 call plug#end()
 
 " Global config
-colorscheme everforest
+colorscheme nord
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
