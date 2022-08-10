@@ -17,7 +17,6 @@ call plug#begin('~/.config/.nvim/plugged')
 
 " Autocomplete
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Theme
 Plug 'rebelot/kanagawa.nvim'
@@ -28,10 +27,20 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree' 
 Plug 'ap/vim-buftabline'
 
+" Svelte
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+
+" Coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
 call plug#end()
 
 " Global config
-colorscheme nord
+colorscheme kanagawa
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -57,3 +66,10 @@ set splitbelow
 " Shortcuts
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+
+" Prettier Settings
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat_require_pragma = 0
+au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+inoremap <silent><expr> <c-space> coc#refresh()
+tnoremap <C-w>k <C-\><C-n><C-w>k
