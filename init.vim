@@ -20,8 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Theme
-Plug 'arcticicestudio/nord-vim'
-Plug 'sainnhe/everforest'
+Plug 'rebelot/kanagawa.nvim'
 
 " Nav
 Plug 'easymotion/vim-easymotion'
