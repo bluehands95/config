@@ -3,3 +3,4 @@
 - Neovim
 - Kitty
 - Zsh
+- i3
