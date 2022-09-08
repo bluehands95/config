@@ -1,17 +1,11 @@
-set number
-set relativenumber
-set numberwidth=1
-set noswapfile
-set noshowmode
+syntax on
+set nu ru et
+set ts=2 sts=2 sw=2
+set cursorline
+set hlsearch
 set scrolloff=5
 set mouse=a
-set clipboard=unnamed
-set incsearch
-set ignorecase
-set smartcase
-set shiftwidth=4
-set encoding=utf-8
-syntax enable
+set encoding=UTF-8
 
 call plug#begin('~/.config/.nvim/plugged')
 
@@ -26,13 +20,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree' 
 Plug 'ap/vim-buftabline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-fugitive'
 
 " Svelte
 Plug 'evanleck/vim-svelte'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-
-" Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -67,9 +61,7 @@ set splitbelow
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 
-" Prettier Settings
+" Prettier
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat_require_pragma = 0
 au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
-inoremap <silent><expr> <c-space> coc#refresh()
-tnoremap <C-w>k <C-\><C-n><C-w>k
