@@ -1,6 +1,6 @@
 syntax on
 set nu ru et
-set ts=2 sts=2 sw=2
+set ts=4 sts=4 sw=4
 set cursorline
 set hlsearch
 set scrolloff=5
@@ -22,14 +22,7 @@ Plug 'preservim/nerdtree'
 Plug 'ap/vim-buftabline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
-
-" Svelte
-Plug 'evanleck/vim-svelte'
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'codechips/coc-svelte', {'do': 'npm install'}
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 call plug#end()
 
@@ -60,8 +53,3 @@ set splitbelow
 " Shortcuts
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
-
-" Prettier
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat_require_pragma = 0
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
